@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Calculator</title>
+        <meta name="description" content="Description of the page less than 150 characters">
+        <link rel="icon" type="image/png" href="favicon.png">
+        <link rel="apple-touch-icon" href="custom-icon.png">
+        <link rel="stylesheet" href="scss/styles.scss">
+    </head>
+
+    <body>
+
+        <header>
+        </header>
+
+        <main>
+            <div class="window" id="container" onmousedown='dragWindow.startMoving(this, "container", event);' onmouseup='dragWindow.stopMoving("container");'>
+
+            <div class="display">
+                <span id="output"></span>
+            </div>
+
+            <div class="row">
+                <button id="AC" value="AC" class="func" onclick="funcClear()">AC</button>
+                <button value="-" class="func" onclick="funcNegPos()">&#x207a;&#x2044;&minus;</button>
+                <button value="" class="func" onclick="funcPercent()">%</button>
+                <button id="divide" value="/" class="math" onclick="addOperator(value)">&divide;</button>
+            </div>
+
+            <div class="row">
+                <button value="7" class="number" onclick="numbers(value)">7</button>
+                <button value="8" class="number" onclick="numbers(value)">8</button>
+                <button value="9" class="number" onclick="numbers(value)">9</button>
+                <button id="multiply" value="*" class="math" onclick="addOperator(value)">&times;</button>
+            </div>
+
+            <div class="row">
+                <button value="4" class="number" onclick="numbers(value)">4</button>
+                <button value="5" class="number" onclick="numbers(value)">5</button>
+                <button value="6" class="number" onclick="numbers(value)">6</button>
+                <button id="subtract" value="-" class="math" onclick="addOperator(value)">&minus;</button>
+            </div>
+
+            <div class="row">
+                <button value="1" class="number" onclick="numbers(value)">1</button>
+                <button value="2" onclick="numbers(value)">2</button>
+                <button value="3" onclick="numbers(value)">3</button>
+                <button id="add" value="+" class="math" onclick="addOperator(value)">+</button>
+            </div>
+
+            <div class="row">
+                <button value="0" class="zero bottom-left" onclick="numbers(value)"><span class="left-padding">0</span></button>
+                <button value="." onclick="numbers(value)">.</button>
+                <button value="=" class="math bottom-right" onclick="equals()">=</button>
+            </div>
+
+            </div>
+        </main>
+
+        <footer>
+        </footer>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/mathjs/3.18.0/math.min.js"></script>
+        <script src="js/calculator.js"></script>
+    </body>
+    </html>

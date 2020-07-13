@@ -1,0 +1,30 @@
+{
+  "name": "tidy",
+  "version": "1.0.0",
+  "description": "A simple starting point for new frontend projects",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html -p 3000 --open --no-source-maps",
+    "clean": "rm -rf dist/*",
+    "build:parcel": "parcel build src/index.html --no-source-maps",
+    "build": "npm run clean && npm run build:parcel"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaechle/tidy.git"
+  },
+  "author": "Tim Kaechle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaechle/tidy/issues"
+  },
+  "homepage": "https://github.com/kaechle/tidy#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1",
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "parcel-plugin-imagemin": "^4.0.1",
+    "parcel-plugin-svg-sprite": "^1.4.1"
+  }
+}
